@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+. ./config.sh
+
+# To extract key and cert from pkcs12 file
+openssl pkcs12 -in ${TEST_SERVER}.pfx -info -nodes -passin env:KS_PASSWORD | openssl rsa -out ${TEST_SERVER}.key
+openssl pkcs12 -in ${TEST_SERVER}.pfx -info -nodes -passin env:KS_PASSWORD | openssl x509 -out ${TEST_SERVER}.pem
+
