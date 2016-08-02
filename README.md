@@ -31,3 +31,6 @@ There are some additional files distributed.
 **InstallCert.java:** A program that makes a connection to a SSL Server and verifies if the certs sent by the Server is trusted.
 
     ${JAVA_HOME}/bin/java -cp . InstallCert ${TEST_SERVER}:${TEST_PORT}
+
+## Kerberos scripts
+**configure_kerberos.py:** Configure Kerberos using CM API
